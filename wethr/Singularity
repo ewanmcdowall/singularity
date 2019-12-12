@@ -3,15 +3,12 @@ From: ubuntu:18.04
 
 
 %runscript
-    wethr | lolcat
-
+    wethr | cowsay
 %post
-    echo "Hello from inside the container"
     apt update
-    apt install -y npm lolcat
+    apt install -y npm cowsay
     npm install -g wethr
 
 
 %environment
 	PATH=/usr/games:$PATH
-	export LC_ALL=C
