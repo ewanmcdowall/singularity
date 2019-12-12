@@ -11,3 +11,7 @@ From: ubuntu:18.04
     apt install -y npm lolcat
     npm install -g wethr
 
+
+%environment
+	PATH=/usr/games:$PATH
+	export LC_ALL=C
