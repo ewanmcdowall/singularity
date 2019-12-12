@@ -3,7 +3,10 @@ From: ubuntu:18.04
 
 
 %runscript
-    wethr | cowsay
+    TMP=$(tempfile -d .)
+    wethr > $TMP
+    cat $TMP | cowsay
+    rm $TMP
 %post
     apt update
     apt install -y npm cowsay
