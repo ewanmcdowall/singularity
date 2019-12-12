@@ -11,4 +11,6 @@ From: ubuntu:18.04
 
 
 %environment
-	PATH=/usr/games:$PATH
+	export PATH=/usr/games:$PATH
+	export LC_ALL=C
+
